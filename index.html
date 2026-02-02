@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOOL GHÉP CHUỖI BANNED USER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Popup Thông Báo -->
+    <div id="notificationPopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close-x" id="closePopupX">×</button>
+            
+            <div class="popup-header">
+                <h2>THÔNG BÁO</h2>
+                <p class="popup-subtitle">Web vừa update thêm chức năng VIP BRO mới rồi đó, Nguyễn Phi vào mà sài thử nha ✨</p>
+            </div>
+            
+            <div class="popup-body">
+                <div class="social-buttons">
+                    <a href="https://haulekhac.github.io/ghepchuoigame1s/" class="social-btn website-btn" target="_blank">
+                        🌐 Website Mới
+                    </a>
+                </div>
+                
+                <p class="popup-note">Không biết dùng thì mở mồm nhắn tao nha thằng ngu Nguyễn Phi</p>
+                
+                <div class="popup-checkbox">
+                    <input type="checkbox" id="dontShowAgain">
+                    <label for="dontShowAgain">Đóng trong 24h</label>
+                </div>
+            </div>
+            
+            <div class="popup-banner">
+                <div class="winter-banner"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>TOOL GHÉP CHUỖI BANNED USER</h1>
+            <div class="form-group">
+                <label for="inputData">1. Dữ liệu thô (Dán tất cả các dòng vào đây):</label>
+                <textarea id="inputData" rows="10" placeholder="Ví dụ:
+123|ten_char_A|99999999|misc
+456|ten_char_B|88888888|misc
+789|ten_char_C|77777777|misc"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="filterField">2. Chọn trường muốn lọc:</label>
+                <select id="filterField">
+                    <option value="namechar">Charname</option>
+                    <option value="id">CharID</option>
+                    <option value="sucmanh">Sức Mạnh [CHƯA DÙNG]</option>
+                    <option value="namechar_unstructured">Ghép Chuỗi - Ghép File Admin</option>
+                </select>
+            </div>
+            <button id="processButton" class="btn">3. LỌC VÀ GHÉP CHUỖI</button>
+            <div class="form-group">
+                <label for="outputResult">4. Chuỗi Kết Quả (Phân tách bằng dấu phẩy):</label>
+                <textarea id="outputResult" rows="5" readonly placeholder="Kết quả sau khi lọc sẽ hiển thị tại đây..."></textarea>
+                <div class="result-info" id="resultInfo"></div>
+            </div>
+            
+            <button id="copyButton" class="btn btn-copy">Sao chép Kết quả</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
